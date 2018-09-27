@@ -1,6 +1,8 @@
 # Nakamoto Mobile Wallet
 
-This mobile wallet creates Ethereum HD wallet, allows easy Ether transfers.
+This mobile wallet creates Ethereum HD wallet, allows easy Ether transfers between same wallet owners.
+
+![QR code](media/home.png "Receive")
 
 ## Technology
 
@@ -28,7 +30,7 @@ This mobile wallet creates Ethereum HD wallet, allows easy Ether transfers.
 * Tooltip when copying address
 * RN NetInfo.isConnected bug and reduxify network availability.
 * Encrypt storage data with user password
-* Nonce too low workaroudn.
+* Nonce too low workaround.
 * Faster data (like last balance) loads with persisted state.
 
 ## Start
@@ -49,6 +51,8 @@ npm run android
 
 ## Send & Receive
 
+![QR code](media/receive.png "Receive")
+
 To test the app:
 
 1. Request your own Infura API key and add to .env(s)
@@ -65,11 +69,12 @@ Also consult with mdApp Help page.
 
 ## Test
 
-Note, tests wouldn't run on this release: https://github.com/wix/detox/issues/821
+Current version has problems: https://github.com/wix/detox/issues/821
 
 ```bash
 npm i -g jest
 react-native start
+detox build --configuration android.emu.debug
 detox test --configuration android.emu.debug
 ```
 
